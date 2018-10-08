@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'site'    => 'BabeAmber CRM',
+    'site'    => '木木博客',
     'admin'   => '管理后台',
-    'company' => '安培斯通',
+    'company' => 'wangbin6957@163.com',
 ];

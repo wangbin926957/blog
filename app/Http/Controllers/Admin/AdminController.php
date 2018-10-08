@@ -21,7 +21,7 @@ class AdminController extends BaseController {
         $sort   = [
             'id' => 'desc',
         ];
-        $data              = $service->all($filter, $sort);
+        $data              = $service->page($filter, $sort);
         $view_data['data'] = $data;
 
         // 系统用户角色

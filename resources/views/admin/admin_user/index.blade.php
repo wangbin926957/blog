@@ -100,6 +100,10 @@
                             @endforeach
                         </tbody>
                     </table>
+
+                    <div>
+                        {{ $data->links() }}
+                    </div>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -249,7 +253,7 @@
 <!-- page script -->
 <script>
     $(function() {
-        $('#data_table').DataTable();
+        // $('#data_table').DataTable();
 
         $('#btn_add').click(function() {
             // 重置表单
