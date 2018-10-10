@@ -6,30 +6,17 @@ use App\Services\UserService;
 use Input;
 
 /**
- * @author   Michael Liang    <liang15946@163.com>
- * @date     2018-7-30
+ * @author   Wangbin
+ * @date     2018-10-10
  * @desc     主页 控制器
  * @version  1.0
  */
 class IndexController extends BaseController {
 
-    // 管理后台主页
+    // 前台首页
     public function index() {
-        if ($this->isLogin()) {
-            $login_user = $this->getLoginUser();
-            $role_id    = $login_user->role_id ?? '';
-            $menus      = [];
-
-            if ($role_id) {
-                $menus = MenuService::getMenusByClient($role_id);
-            }
-
-            $view_data['menus'] = $menus;
-
-            return view('admin.index', $view_data);
-        } else {
-            return redirect('/login');
-        }
+        $view_data = [];
+        return view('client.index.index', $view_data);
     }
 
     // 登录

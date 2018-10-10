@@ -4,8 +4,7 @@ Route::group([
     'namespace' => 'App\Http\Controllers\Admin',
     'domain'    => config('const.admin_domain'),
 ], function () {
-    Route::match(['get', 'post'], '/', 'IndexController@index');
-    Route::match(['get', 'post'], '/test', 'TestController@index');
+//    Route::match(['get', 'post'], '/', 'IndexController@index');
     // 登录
     Route::match(['get', 'post'], '/login', 'IndexController@login');
     // 退出
